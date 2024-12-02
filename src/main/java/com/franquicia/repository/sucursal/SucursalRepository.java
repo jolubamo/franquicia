@@ -35,13 +35,11 @@ public class SucursalRepository implements ISucursalRepository{
 
 	@Override
 	public void actualizar(Sucursal t) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void eliminar(Integer id) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -57,7 +55,6 @@ public class SucursalRepository implements ISucursalRepository{
 
 	@Override
 	public List<Sucursal> listar() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	

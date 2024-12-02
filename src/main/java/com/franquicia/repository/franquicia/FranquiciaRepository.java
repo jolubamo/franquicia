@@ -46,7 +46,6 @@ public class FranquiciaRepository implements IFranquiciaRepository{
 
 	@Override
 	public void eliminar(Integer id) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -62,7 +61,6 @@ public class FranquiciaRepository implements IFranquiciaRepository{
 
 	@Override
 	public List<Franquicia> listar() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	

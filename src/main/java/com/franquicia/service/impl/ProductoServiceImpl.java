@@ -26,4 +26,15 @@ public class ProductoServiceImpl extends GeneralServiceImpl<Producto, Integer> i
 		return repo.listarProductoMayorStock(idFranquicia);
 	}
 
+	@Override
+	public void actualizarStock(Producto t) {
+		repo.actualizarStock(t);
+		
+	}
+
+	@Override
+	public void actualizarNombre(Producto t) {
+		repo.actualizarNombre(t);
+	}
+
 }

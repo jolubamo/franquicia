@@ -19,4 +19,10 @@ public class SucursalServiceImpl extends GeneralServiceImpl<Sucursal, Integer> i
 		return repo;
 	}
 
+	@Override
+	public void actualizarNombre(Sucursal t) {
+		repo.actualizarNombre(t);
+		
+	}
+
 }

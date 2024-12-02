@@ -5,9 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,6 +40,24 @@ public class ProductoController {
 	public ResponseEntity<?> insertar(@RequestBody Producto producto) throws Exception {
 		Integer resultado = service.insertar(producto);
 		return new ResponseEntity<>(resultado, HttpStatus.CREATED);
+	}
+	
+	@PutMapping(path="/stock")
+	public ResponseEntity<?> actualizarStock(@RequestBody Producto producto)  throws Exception{
+		service.actualizarStock(producto);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+	
+	@PutMapping(path="/nombre")
+	public ResponseEntity<?> actualizarNombre(@RequestBody Producto producto)  throws Exception{
+		service.actualizarNombre(producto);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<?> eliminar(@PathVariable Integer id)  throws Exception{
+		service.eliminar(id);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 }

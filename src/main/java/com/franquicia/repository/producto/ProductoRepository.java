@@ -36,7 +36,6 @@ public class ProductoRepository implements IProductoRepository{
 
 	@Override
 	public void actualizar(Producto t) {
-		// TODO Auto-generated method stub
 		
 	}
 

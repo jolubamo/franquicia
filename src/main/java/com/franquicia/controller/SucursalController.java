@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,12 @@ public class SucursalController {
 	public ResponseEntity<?> insertar(@RequestBody Sucursal sucursal) throws Exception {
 		Integer resultado = service.insertar(sucursal);
 		return new ResponseEntity<>(resultado, HttpStatus.CREATED);
+	}
+	
+	@PutMapping(path="/nombre")
+	public ResponseEntity<?> actualizarNombre(@RequestBody Sucursal sucursal)  throws Exception{
+		service.actualizarNombre(sucursal);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 	
 }
